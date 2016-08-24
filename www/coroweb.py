@@ -8,6 +8,8 @@ import asyncio, inspect, logging, functools, os
 from aiohttp import web
 from urllib import parse
 
+from apis import APIError
+
 def get(path):
 	def decorator(func):
 		@functools.wraps(func)
